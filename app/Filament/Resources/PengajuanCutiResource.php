@@ -18,7 +18,7 @@ class PengajuanCutiResource extends Resource
 {
     protected static ?string $model = PengajuanCuti::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
 
     public static function form(Form $form): Form
     {
@@ -69,7 +69,6 @@ class PengajuanCutiResource extends Resource
                 Tables\Columns\TextColumn::make('tanggal_akhir')->date()->label('tgl_akhir'),
                 Tables\Columns\TextColumn::make('jumlah')->label('Jumlah')->sortable(),
                 Tables\Columns\TextColumn::make('status')->badge(),
-                Tables\Columns\TextColumn::make('created_at')->dateTime()->label('Dibuat'),
             ])
             ->filters([
                 //

@@ -18,7 +18,7 @@ class JatahCutiResource extends Resource
 {
     protected static ?string $model = JatahCuti::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
 
     public static function form(Form $form): Form
     {
@@ -47,7 +47,7 @@ class JatahCutiResource extends Resource
                 Tables\Columns\TextColumn::make('tahun')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('jumlah')->sortable(),
                 Tables\Columns\TextColumn::make('nip')->label('NIP')->sortable()->searchable(),
-               
+
 
             ])
             ->filters([
