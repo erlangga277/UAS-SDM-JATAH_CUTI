@@ -438,7 +438,7 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
                 <div class="member-content">
                   <h3>Alifya Bella Ma'rufah</h3>
                   <span>Product Designer</span>
-                  <p>Mendesain tampilan visual aplikasi/website yang menarik dan mudah digunakan</p>
+                  <p>Mendesain tampilan visual aplikasi/website yang menarik dan mudah digunakan.</p>
                 </div>
               </div>
             </div><!-- End slide item -->
@@ -476,10 +476,30 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
                 <div class="member-content">
                   <h3>Silvia Zahrodiniah</h3>
                   <span>Project Manager</span>
-                  <p> Menyusun rencana kerja (timeline, milestone, dan deadline)</p>
+                  <p> Menyusun rencana kerja (timeline, milestone, dan deadline).</p>
                 </div>
               </div>
             </div>
+
+            <div class="swiper-slide">
+              <div class="team-member">
+                <div class="member-image">
+                  <img src="assets/img/person/rifqie.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="member-social">
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-content">
+                  <h3>Rifqi Abiyu Fahlevi</h3>
+                  <span>Data & Reporting Engineer</span>
+                  <p>Mengelola data pengajuan cuti serta membuat laporan rekap cuti secara otomatis berdasarkan data karyawan.</p>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
 <!--
             <div class="swiper-slide">
               <div class="team-member">
