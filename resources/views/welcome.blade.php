@@ -135,8 +135,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">About</span>
-        <h2>About</h2>
+        <span class="description-title">Tentang Kami</span>
+        <h2>Tentang Kami</h2>
         <p>Kami adalah tim yang peduli pada keseimbangan antara produktivitas dan kesejahteraan karyawan. Melalui proyek ini, kami berkomitmen menciptakan solusi digital yang membantu perusahaan dan pegawai dalam mengelola hak cuti secara adil, transparan, dan efisien.
 
 Dalam dunia kerja yang dinamis, kami percaya bahwa manajemen cuti yang baik bukan hanya tentang administrasi — tapi juga tentang menjaga kesehatan mental, menciptakan lingkungan kerja yang sehat, dan meningkatkan loyalitas karyawan.
@@ -219,9 +219,9 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Fitur - fitur yang tersedia</span>
-        <h2>Fitur - fitur yang tersedia</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">Ruangan yang tersedia</span>
+        <h2>Ruangan yang tersedia</h2>
+        {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -232,11 +232,11 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
             <div class="col-lg-3 filter-sidebar">
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">Fitur - Fitur yang tersedia</li>
-                  <li data-filter=".filter-photography">Photography</li>
-                  <li data-filter=".filter-design">Design</li>
-                  <li data-filter=".filter-automotive">Automotive</li>
-                  <li data-filter=".filter-nature">Nature</li>
+                  <li data-filter="*" class="filter-active">Ruangan yang tersedia</li>
+                  <li data-filter=".filter-photography">Ruang Rapat</li>
+                  <li data-filter=".filter-design">Kantin</li>
+                  <li data-filter=".filter-automotive">Ruang Kerja</li>
+                  <li data-filter=".filter-nature">Lobby</li>
                 </ul>
               </div>
             </div>
@@ -246,13 +246,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/ruangrapat.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Photography</span>
-                        <h4>Capturing Moments</h4>
+                        <span class="category">Ruang Rapat</span>
+                        <h4>Strategic Space</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-1.webp" class="glightbox" title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/ruangrapat.jpeg" class="glightbox" title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -262,13 +262,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/kantin2.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Web Design</span>
-                        <h4>Woodcraft Design</h4>
+                        <span class="category">Kantin</span>
+                        <h4>Lunch Break</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" title="Woodcraft Design"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/kantin2.jpeg" class="glightbox" title="Woodcraft Design"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -278,13 +278,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/work.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Automotive</span>
-                        <h4>Classic Beauty</h4>
+                        <span class="category">Ruang Kerja</span>
+                        <h4>Work Zone</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/work.jpeg" class="glightbox" title="Work Zone"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -294,13 +294,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/lobby.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Nature</span>
-                        <h4>Natural Growth</h4>
+                        <span class="category">Lobby</span>
+                        <h4>Reception Spot</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/lobby.jpeg" class="glightbox" title="Reception Spot"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -310,13 +310,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/ruangrapat2.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Photography</span>
-                        <h4>Urban Stories</h4>
+                        <span class="category">Ruang Rapat</span>
+                        <h4>Executive Room</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" title="Urban Stories"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/ruangrapat2.jpeg" class="glightbox" title="Urban Stories"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -326,13 +326,13 @@ Dengan terus mengikuti perkembangan teknologi dan kebutuhan organisasi, kami ber
 
                 <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets/img/portfolio/KANTIN.jpeg" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Web Design</span>
-                        <h4>Digital Experience</h4>
+                        <span class="category">Kantin</span>
+                        <h4>Refresh Zone</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
+                          <a href="assets/img/portfolio/KANTIN.jpeg" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
                           <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
@@ -408,12 +408,12 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
             <div class="swiper-slide">
               <div class="team-member">
                 <div class="member-image">
-                  <img src="assets/img/person/person-m-3.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/person/er.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="member-social">
                     <a href="#"><i class="bi bi-twitter-x"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/a.erlangg44?igsh=MXMxbDVhM2M3Y3puZQ=="><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/erlangga-abidin-588a88330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
                 <div class="member-content">
@@ -427,12 +427,12 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
             <div class="swiper-slide">
               <div class="team-member">
                 <div class="member-image">
-                  <img src="assets/img/person/person-f-5.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/person/bella.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="member-social">
                     <a href="#"><i class="bi bi-twitter-x"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/leefjleven?igsh=MXMxbDVhM2M3Y3puZQ=="><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/alifya-bella-aa2053252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
                 <div class="member-content">
@@ -530,9 +530,9 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
     <section id="contact" class="contact section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Contact</span>
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">Hubungi Kami</span>
+        <h2>Hubungi Kami</h2>
+        <p>Untuk pertanyaan lebih lanjut, silakan hubungi tim kami melalui alamat atau kontak yang tertera berikut ini.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -560,7 +560,7 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
                 </div>
                 <div class="card-content">
                   <h4>Email Us</h4>
-                  <p>viviv@gmail.com</p>
+                  <p>codewithti1@gmail.com</p>
                 </div>
               </div>
 
@@ -580,7 +580,7 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
                 </div>
                 <div class="card-content">
                   <h4>Jam Kerja</h4>
-                  <p>07.00 16.00</p>
+                  <p>07.00 - 16.00</p>
                 </div>
               </div>
             </div>
@@ -598,33 +598,43 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
           </div>
 
           <div class="contact-form-panel">
-            <div class="map-container">
-              <iframe src="https://www.google.com/maps/place/East+Jakarta,+East+Jakarta+City,+Jakarta/@-6.2607811,106.7402013,11z/data=!3m1!4b1!4m6!3m5!1s0x2e69f2d148fbe713:0x6e667d52ebedf5a9!8m2!3d-6.2250138!4d106.9004472!16zL20vMDdfZGNz?entry=ttu&g_ep=EgoyMDI1MDYxNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+  <div class="map-container" style="width: 100%; height: 300px;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.63283363563!2d106.84044717331612!3d-6.225013800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2d148fbe713%3A0x6e667d52ebedf5a9!2sEast%20Jakarta%2C%20East%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1719140131723!5m2!1sen!2sid" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
 
             <div class="form-container">
-              <h3>Send Us a Message</h3>
+              <h3>Kirim Pesan kepada Kami</h3>
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris hendrerit faucibus imperdiet nec eget felis.</p> -->
 
               <form action="forms/contact.php" method="post" class="php-email-form">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="nameInput" name="name" placeholder="Full Name" required="">
-                  <label for="nameInput">Full Name</label>
+                  <input type="text" class="form-control" id="nameInput" name="name" placeholder="Nama Lengkap" required="">
+                  <label for="nameInput">Nama Lengkap Anda</label>
                 </div>
 
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="emailInput" name="email" placeholder="Email Address" required="">
-                  <label for="emailInput">Email Address</label>
+                  <label for="emailInput">Alamat Email</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="subjectInput" name="subject" placeholder="Subject" required="">
-                  <label for="subjectInput">Subject</label>
+                  <input type="text" class="form-control" id="subjectInput" name="subjek" placeholder="Subject" required="">
+                  <label for="subjectInput">Subjek</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                  <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Your Message" style="height: 150px" required=""></textarea>
-                  <label for="messageInput">Your Message</label>
+                  <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Pesan Anda" style="height: 150px" required=""></textarea>
+                  <label for="messageInput">Pesan Anda</label>
                 </div>
 
                 <div class="my-3">
@@ -634,7 +644,7 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
                 </div>
 
                 <div class="d-grid">
-                  <button type="submit" class="btn-submit">Send Message <i class="bi bi-send-fill ms-2"></i></button>
+                  <button type="submit" class="btn-submit">Kirim Pesan <i class="bi bi-send-fill ms-2"></i></button>
                 </div>
               </form>
             </div>
@@ -690,7 +700,7 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
           <p>Kuningan City,  535022</p>
           <p>Indonesia</p>
           <p class="mt-4"><strong>Phone:</strong> <span>+62 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>viviv@gmail.com</span></p>
+          <p><strong>Email:</strong> <span>codewithti1@gmail.com</span></p>
         </div>
 
       </div>
