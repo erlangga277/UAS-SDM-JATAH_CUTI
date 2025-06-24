@@ -20,13 +20,14 @@ class pegawai extends Model
         'tgl_lahir',
         'telepon',
         'alamat',
-        'divisi_id',
+        'manager_id',
+        'foto',
     ];
 
 
-    public function divisi()
+    public function manager()
     {
-        return $this->belongsTo(Divisi::class, 'divisi_id');
+        return $this->belongsTo(Divisi::class, 'manager_id');
     }
 
 

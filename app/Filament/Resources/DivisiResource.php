@@ -3,15 +3,14 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\DivisiResource\Pages;
-use App\Filament\Resources\DivisiResource\RelationManagers;
 use App\Models\Divisi;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
 
 class DivisiResource extends Resource
 {
@@ -23,17 +22,17 @@ class DivisiResource extends Resource
     {
         return $form
             ->schema([
-            Forms\Components\TextInput::make('kode')
-                ->required()
-                ->maxLength(10),
+                Forms\Components\TextInput::make('kode')
+                    ->required()
+                    ->maxLength(10),
 
-            Forms\Components\TextInput::make('nama')
-                ->required()
-                ->maxLength(50),
+                Forms\Components\TextInput::make('nama')
+                    ->required()
+                    ->maxLength(50),
 
-            Forms\Components\TextInput::make('divisi')
-                ->required()
-                ->maxLength(45),
+                Forms\Components\TextInput::make('manager')
+                    ->required()
+                    ->maxLength(45),
             ]);
     }
 
@@ -43,11 +42,9 @@ class DivisiResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('kode')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('nama')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('divisi')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('manager')->sortable()->searchable(),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -58,11 +55,39 @@ class DivisiResource extends Resource
             ]);
     }
 
+    public static function canViewAny(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canView(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canCreate(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::check() && Auth::user()->role === 'admin';
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager']);
+    }
+
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array

@@ -14,12 +14,12 @@ class divisi extends Model
     protected $fillable = [
         'kode',
         'nama',
-        'divisi',
+        'manager',
     ];
 
     // Relasi: Satu divisi memiliki banyak pegawai
     public function pegawai()
     {
-        return $this->hasMany(Pegawai::class, 'divisi_id');
+        return $this->hasMany(Pegawai::class, 'manager_id');
     }
 }

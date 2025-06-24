@@ -4,15 +4,14 @@ namespace App\Filament\Resources;
 
 use App\Models\Pegawai;
 use App\Filament\Resources\JatahCutiResource\Pages;
-use App\Filament\Resources\JatahCutiResource\RelationManagers;
 use App\Models\JatahCuti;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
 
 class JatahCutiResource extends Resource
 {
@@ -24,19 +23,19 @@ class JatahCutiResource extends Resource
     {
         return $form
             ->schema([
-                 Forms\Components\TextInput::make('tahun')
-                ->required()
-                ->numeric(),
+                Forms\Components\TextInput::make('tahun')
+                    ->required()
+                    ->numeric(),
 
                 Forms\Components\TextInput::make('jumlah')
-                ->required()
-                ->numeric(),
+                    ->required()
+                    ->numeric(),
 
-                 Forms\Components\Select::make('nip')
-                ->label('Pegawai')
-                ->options(Pegawai::pluck('nip', 'nip'))
-                ->searchable()
-                ->required(),
+                Forms\Components\Select::make('nip')
+                    ->label('Pegawai')
+                    ->options(Pegawai::pluck('nip', 'nip'))
+                    ->searchable()
+                    ->required(),
             ]);
     }
 
@@ -47,8 +46,6 @@ class JatahCutiResource extends Resource
                 Tables\Columns\TextColumn::make('tahun')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('jumlah')->sortable(),
                 Tables\Columns\TextColumn::make('nip')->label('NIP')->sortable()->searchable(),
-
-
             ])
             ->filters([
                 //
@@ -61,6 +58,36 @@ class JatahCutiResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canView(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canCreate(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::check() && Auth::user()->role === 'admin';
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD']);
     }
 
     public static function getRelations(): array

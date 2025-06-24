@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode', 10);
             $table->string('nama', 50);
-            $table->string('divisi', 45);
+            $table->string('manager', 45);
             $table->timestamps();
         });
     }

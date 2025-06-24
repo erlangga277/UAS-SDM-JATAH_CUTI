@@ -2,17 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use App\Models\Pegawai;
-use App\Filament\Resources\PengajuanCutiResource\Pages;
-use App\Filament\Resources\PengajuanCutiResource\RelationManagers;
 use App\Models\PengajuanCuti;
+use App\Models\Pegawai;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use App\Filament\Resources\PengajuanCutiResource\Pages;
 
 class PengajuanCutiResource extends Resource
 {
@@ -22,9 +21,8 @@ class PengajuanCutiResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                Forms\Components\DatePicker::make('tanggal_awal')
+        return $form->schema([
+            Forms\Components\DatePicker::make('tanggal_awal')
                 ->label('Tanggal Awal Cuti')
                 ->required(),
 
@@ -34,30 +32,31 @@ class PengajuanCutiResource extends Resource
 
             Forms\Components\TextInput::make('jumlah')
                 ->label('Jumlah Hari')
-                ->required()
                 ->numeric()
-                ->minValue(1),
+                ->minValue(1)
+                ->required(),
 
             Forms\Components\Textarea::make('ket')
                 ->label('Alasan Cuti')
-                ->required()
-                ->maxLength(100),
+                ->maxLength(100)
+                ->required(),
 
             Forms\Components\Select::make('status')
-                ->required()
+                ->label('Status')
                 ->options([
                     'diproses' => 'Diproses',
                     'disetujui' => 'Disetujui',
                     'ditolak' => 'Ditolak',
                 ])
-                ->default('diproses'),
+                ->default('diproses')
+                ->required(),
 
             Forms\Components\Select::make('nip')
-                ->label('Pegawai')
+                ->label('Pegawai (NIP)')
                 ->options(Pegawai::pluck('nip', 'nip'))
                 ->searchable()
                 ->required(),
-            ]);
+        ]);
     }
 
     public static function table(Table $table): Table
@@ -65,14 +64,13 @@ class PengajuanCutiResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('nip')->label('NIP')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('tanggal_awal')->date()->label('tgl_awal'),
-                Tables\Columns\TextColumn::make('tanggal_akhir')->date()->label('tgl_akhir'),
-                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah')->sortable(),
-                Tables\Columns\TextColumn::make('status')->badge(),
+                Tables\Columns\TextColumn::make('tanggal_awal')->label('Tanggal Awal')->date(),
+                Tables\Columns\TextColumn::make('tanggal_akhir')->label('Tanggal Akhir')->date(),
+                Tables\Columns\TextColumn::make('jumlah')->label('Jumlah Hari')->sortable(),
+                Tables\Columns\TextColumn::make('ket')->label('Alasan'),
+                Tables\Columns\TextColumn::make('status')->label('Status')->badge(),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -85,9 +83,7 @@ class PengajuanCutiResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
@@ -97,5 +93,36 @@ class PengajuanCutiResource extends Resource
             'create' => Pages\CreatePengajuanCuti::route('/create'),
             'edit' => Pages\EditPengajuanCuti::route('/{record}/edit'),
         ];
+    }
+
+    // Role-based Permissions
+    public static function canViewAny(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canView(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canCreate(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager', 'pegawai']);
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::check() && Auth::user()->role === 'admin';
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return Auth::check() && in_array(Auth::user()->role, ['admin', 'HRD', 'manager']);
     }
 }

@@ -55,12 +55,8 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li>
-   <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+            <a href="{{ url('/admin/login') }}">Login</a>
 </li>
-
-            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
-
-
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -619,13 +615,13 @@ Kami adalah tim yang terdiri dari individu-individu profesional dengan latar bel
 
           <div class="contact-form-panel">
   <div class="map-container" style="width: 100%; height: 300px;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.63283363563!2d106.84044717331612!3d-6.225013800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2d148fbe713%3A0x6e667d52ebedf5a9!2sEast%20Jakarta%2C%20East%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1719140131723!5m2!1sen!2sid" 
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.63283363563!2d106.84044717331612!3d-6.225013800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2d148fbe713%3A0x6e667d52ebedf5a9!2sEast%20Jakarta%2C%20East%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1719140131723!5m2!1sen!2sid"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
