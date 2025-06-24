@@ -41,8 +41,6 @@ Route::post('/login', function (Request $request) {
 | Register
 |--------------------------------------------------------------------------
 */
-Route::get('/register', fn () => redirect('/#register'))->name('register.show');
-
 Route::post('/register', function (Request $request) {
 
     $data = $request->validate([
@@ -51,16 +49,13 @@ Route::post('/register', function (Request $request) {
         'password' => ['required', 'confirmed', Password::defaults()],
     ]);
 
-    // buat user baru
+    // Buat user baru
     $user = User::create([
         'name'     => $data['name'],
         'email'    => $data['email'],
         'password' => Hash::make($data['password']),
     ]);
 
-    // login otomatis
-    Auth::login($user);
-
-    // arahkan ke dashboard Filament
-    return redirect('/admin');
+    // TIDAK login otomatis
+    return redirect('/#login')->with('success', 'Registrasi berhasil! Silakan login.');
 })->name('register');
