@@ -43,12 +43,12 @@ class UserResource extends Resource
 
                 Forms\Components\Select::make('role')
                     ->options([
-                        'Admin' => 'Admin',
+                        'admin' => 'admin',
                         'HRD' => 'HRD',
-                        'Manager' => 'Manager',
-                        'Pegawai' => 'Pegawai',
+                        'manager' => 'manager',
+                        'pegawai' => 'pegawai',
                     ])
-                    ->default('Admin')
+                    ->default('admin')
                     ->required(),
             ]);
     }
